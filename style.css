@@ -1,0 +1,244 @@
+@font-face {
+    font-family: hanken;
+    src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+* {
+    font-family: hanken;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Light-royal-blue: hsl(241, 81%, 54%); /* Background */
+    --Violet-blue: hsla(256, 72%, 46%, 1); /* Circle */
+    --Persian-blue: hsla(241, 72%, 46%, 0); /* Circle */
+    --Light-slate-blue: hsl(252, 100%, 67%); /* Background */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    border-radius: 20px;
+    height: 400px;
+    width: 600px;
+    box-shadow: 20px 20px 60px rgb(205, 203, 203); 
+    
+}
+
+.left {
+    border-radius: 20px;
+    background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--White);
+    padding: 40px;
+    width: 50%;
+    gap: 17px;
+}
+
+.first-para{
+    font-weight: bold;
+    color: white;
+    opacity: 0.5;
+    font-size: 18px;
+}
+
+.score-circle {
+    background: linear-gradient(var(--Violet-blue), var(--Persian-blue));    
+    /* border-radius: 50%; */
+    width: 150px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score {
+    font-size: 48px;
+}
+
+.score-para{
+    font-weight: bold;
+    color: white;
+    opacity: 0.5;
+} 
+
+.left > h1 {
+    font-size: 32px;
+}
+
+.second-para {
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+    font-size: 15px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 40px 30px;
+    gap: 18px;
+}
+
+.right > p {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--Dark-gray-blue);
+}
+
+.score-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.score-boxes > * {
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    padding: 0px 15px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.reaction .name {
+    color: var(--Light-red);
+    font-weight: bold;
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.058);
+}
+
+.memory .name {
+    color: var(--Orangey-yellow);
+    font-weight: bold;
+}
+
+.verbal {
+    
+    background-color: hsla(166, 100%, 37%, 0.045);
+}
+
+.verbal .name {
+    color: var(--Green-teal);
+    font-weight: bold;
+}
+
+.visual {
+   background-color: rgba(87, 38, 221, 0.051);
+}
+
+.visual .name {
+    color: var(--Violet-blue);
+    font-weight: bold;
+}
+
+.sign-heading {
+    display: flex;
+    gap: 10px;
+}
+
+.detailed-scores {
+    color: var(--Dark-gray-blue);
+}
+
+.detailed-scores span {
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.right button {
+    background-color: var(--Dark-gray-blue);
+    color: white;
+    padding: 12px;
+    border-radius: 25px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 580px) {
+    .card {
+        flex-direction: column;
+        width: 300px;
+        height: 500px;
+    }
+
+    .left {
+        height: 44%;
+        width: 100%;
+        padding: 20px;
+        gap: 5px;
+    }
+
+    .right {
+        height: 55%;
+        width: 100%;
+    }
+
+    .score-circle {
+        background: linear-gradient(var(--Violet-blue), var(--Persian-blue));    
+        border-radius: 50px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+    
+    .score {
+        font-size: 24px;
+    }
+    
+    .score-para{
+        font-weight: bold;
+        color: white;
+        opacity: 0.5;
+        font-size: 14px;
+    } 
+
+    .left > h1 {
+        font-size: 24px;
+    }
+
+    .score-boxes > * {
+        height: 25px;
+    }
+
+}
